@@ -6,7 +6,9 @@ Question.destroy_all
 Answer.destroy_all
 # User.destroy_all
 
-ques = RestClient.get("https://cah-gcs-api.herokuapp.com/api/v1/pack/fourth_expansion")
+# ques = RestClient.get("https://cah-gcs-api.herokuapp.com/api/v1/pack/fourth_expansion")
+ques = RestClient.get("https://cah-rf-api.herokuapp.com/db")
+
 ques_array = JSON.parse(ques)
 
 
@@ -18,18 +20,21 @@ ques_array = JSON.parse(ques)
 
 ques_array["black"].each do |x|
     Question.create(
-        question: x["content"], category: x["pick"].to_s
+        # question: x["content"], category: x["pick"].to_s
+        question: x["content"]
         )
     end 
     
     # a1 = Answer.create(answer: "answers to the code challenge", question_id:54, user_id:1)
     # a2 = Answer.create(answer: "cocaine", question_id:58, user_id:1)
     
-answ = RestClient.get("https://cah-gcs-api.herokuapp.com/api/v1/pack/fourth_expansion")
+# answ = RestClient.get("https://cah-gcs-api.herokuapp.com/api/v1/pack/fourth_expansion")
+answ = RestClient.get("https://cah-rf-api.herokuapp.com/db")
 answ_array = JSON.parse(answ)
                 
 answ_array["white"].each do |x|
     Answer.create(
+        # answer: x, question_id: rand(145..154), user_id: rand(1..9), like: 0
         answer: x, question_id: rand(145..154), user_id: rand(1..9), like: 0
     )
     end 
