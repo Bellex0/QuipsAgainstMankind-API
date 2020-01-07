@@ -26,6 +26,7 @@ rails '~> 6.0.0'
 
 ## Database
 postgreSQL
+pg, '>= 0.18', '< 2.0'
 
 ## Gem Dependencies
 * bcrypt '~> 3.1.7'
