@@ -1,24 +1,45 @@
-# README
+# Rhetort Fort
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### [App](http://youtu.be/vGQjqqLc19Y)
+### [Demo](https://youtu.be/vGQjqqLc19Y)
 
-Things you may want to cover:
+An entertainment app inspired by the games, "Cards Against Humanity" and "Quiplash". Users submit humorous answers to various questions and users vote on the best result.
 
-* Ruby version
+The answer with the most number of "likes" is declared "Conqueror".
 
-* System dependencies
+Users can 
+1) Login/sign up 
+2) Search for questions and read all questions & answers 
+3) Submit and delete their answers
+4) "Like" answers 
 
-* Configuration
+After a user has read/answered a question, an image of "👀🏴" appears on the question card, illustrating that the user has already looked at the question. 
 
-* Database creation
+## Frontend Repository
+[Rhetort Fort Frontend](https://github.com/Bellex0/RhetortFort-Frontend)
 
-* Database initialization
+## Ruby Version
+ruby '2.6.1'
 
-* How to run the test suite
+## Rails Version
+rails '~> 6.0.0'
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database
+postgreSQL
 
-* Deployment instructions
+## Gem Dependencies
+* bcrypt '~> 3.1.7'
+* active_model_serializers '~> 0.10.0'
+* rack-cors
+* jwt '~> 2.1'
+* rest-client, '~> 2.1.0'
 
-* ...
+## Installation
+1) Fork (optional) and clone or download this repository to local system
+2) Use preferred text editor and/or terminal to navigate into `RhetortFort-API` directory
+3) Run `bundle install` (or `bundle i`) in terminal
+4) Run `rails db:create` in terminal to create database
+5) Run `rails db:migrate` in terminal to initialize database
+6) Run `rails db:seed` in terminal to seed database with starter data
+7) Run `rails s` in terminal to run server in browser at http://localhost:3000/
+8) Install and run [Rhetort Fort Frontend](https://github.com/Bellex0/RhetortFort-Frontend)
